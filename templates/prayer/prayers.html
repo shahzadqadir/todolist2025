@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}prayers{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    {% if prayers %}
+    <table class="table">
+      <th>Date Prayed</th>
+      <th>Comments</th>
+      <th>Sprint</th>    
+      {% for prayer in prayers %}
+      <tr>
+        <td>{{prayer.date_prayed}}</td>
+        <td>{{prayer.comments}}</td>
+        <td>{{prayer.sprint}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+    <a href="{% url 'prayer_add' %}"><button>Add Prayer</button></a> 
+  </div> 
+
+{% endblock %}
