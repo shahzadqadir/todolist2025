@@ -20,3 +20,12 @@ class MeditationForm(forms.ModelForm):
         model = Meditation
         fields = ('date_meditated', 'minutes_spent', 'comments', 'sprint')
 
+
+class TaskForm(forms.ModelForm):
+
+    class Meta:
+        model = Task
+        fields = '__all__'
+        exclude = ('owner', )
+
+

@@ -1,6 +1,10 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 
+from django.utils import timezone
+
+
+
 class Sprint(models.Model):
     STATUS_CHOICES = [('notdone', 'notdone'), ('inprogress', 'inprogress'), ('done', 'done')]
     name = models.CharField(max_length=255)
@@ -17,10 +21,10 @@ class Sprint(models.Model):
 class Task(models.Model):
     PRIO_CHOICES = [('high', 'high'), ('medium', 'medium'), ('low', 'low')]
     description = models.CharField(max_length=1000)
-    due_date = models.DateField()
+    due_date = models.DateField(blank=True, null=True)
     date_completed = models.DateField(null=True, blank=True)
     official_due_by = models.DateField(null=True, blank=True)
-    late_fine = models.IntegerField(null=True, blank=True)
+    late_fine = models.IntegerField(null=True, blank=True, default=0)
     priority = models.CharField(choices=PRIO_CHOICES, max_length=255)
     comments = models.TextField(null=True, blank=True)
     task_img = models.ImageField(null=True, blank=True)

@@ -2,39 +2,31 @@
 
 {% block content %}
 
+    
+
     <div class='container ml-1 mt-5'>
+        <h4>Tasks</h4>
         <table class="table">
             <thead>
             <tr>
                 <th scope="col">Description</th>
-                <th scope="col">Due Date</th>
-                <th scope="col">Date Completed</th>
-                <th scope="col">Official Due By</th>
-                <th scope="col">Late Fine</th>
+                <th scope="col">Due Date</th>       
                 <th scope="col">Priority</th>
-                <th scope="col">Comments</th>
-                <th scope="col">Image</th>
-                <th scope="col">Sprint</th>
+                <th scope="col">Status</th>                
             </tr>
             </thead>
             <tbody>
                 {% for task in tasks %}
             <tr>
-                <th scope="row">1</th>
-                <td>{{task.decription}}</td>
+                <td><a href="{% url 'task' task.id %}">{{task.description}}</a></td>
                 <td>{{task.due_date}}</td>
-                <td>{{task.date_completed}}</td>
-                <td>{{task.official_due_by}}</td>
-                <td>{{task.late_fine}}</td>
                 <td>{{task.priority}}</td>
-                <td>{{task.comments}}</td>
-                <td>{{task.task_img}}</td>
-                <td>{{task.sprint}}</td>
+                <td>{{task.status}}</td>
             </tr>
-                {% endfor %}
-            
+                {% endfor %}            
             </tbody>
         </table>
+        <a href="{% url 'task_add' %}"><button>Add Task</button></a>
     </div>
 
 {% endblock %}

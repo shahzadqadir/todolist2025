@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    <h4>Task Details</h4>
+    <table class="table">
+      <tr><td>Description</td><td>{{task.description}}</td></tr>
+      <tr><td>Due Date</td><td>{{task.due_date}}</td></tr>
+      <tr><td>Priority</td><td>{{task.priority}}</td></tr>
+      <tr><td>Official Due By</td><td>{{task.official_due_by}}</td></tr>
+      <tr><td>Late Fine</td><td>£{{task.late_fine}}</td></tr>
+      <tr><td>Status</td><td>{{task.status}}</td></tr>
+      {% if task.status == 'complete' %}
+        <tr><td>Date Completed</td><td>{{task.date_completed}}</td></tr>
+      {% endif %}
+      <tr><td>Comments</td><td>{{task.comments}}</td></tr>
+      <tr><td>Task Image</td><td><a href="{{ task.task_img }}"></a>{{task.task_img}}</td></tr>
+      <tr><td>Sprint</td><td>{{task.sprint}}</td></tr>
+    </table>
+    <a href="{% url 'task_edit' task.id %}"><button>Edit</button></a>
+    <a href="{% url 'task_delete' task.id %}"><button class='logout_button'>Delete</button></a>
+  </div>
+
+{% endblock %}

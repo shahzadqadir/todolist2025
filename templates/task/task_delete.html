@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    <h5>Are you sure want to dete, {{task.description}}?</h5>
+    <form action="" method="post">
+      {% csrf_token %}
+      <button class="logout_button" type="submit">Yes, Delete</button>
+    </form>
+
+  </div>
+
+  
+
+{% endblock %}
