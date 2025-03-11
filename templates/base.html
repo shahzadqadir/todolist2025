@@ -21,7 +21,7 @@
       <li><a href="{% url 'tasks' %}">Tasks</a></li>
       <li><a href="{% url 'meditations' %}">Meditation</a></li>
       <li><a href="{% url 'prayers' %}">Prayers</a></li>
-      <li><a href="#">Sprints</a></li>
+      <li><a href="{% url 'sprints' %}">Sprints</a></li>
     </ul>
   </nav>
   {% if user.is_authenticated %}

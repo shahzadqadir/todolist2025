@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Sprints{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    {% if sprints %}
+    <table class="table">
+      <th>Name</th>
+      <th>Due Date</th>
+      <th>Status</th>
+      <th>Comments</th>    
+      <th>Prize Earned</th>   
+      {% for sprint in sprints %}
+      <tr>
+        <td>{{sprint.name}}</td>
+        <td>{{sprint.due_date}}</td>
+        <td>{{sprint.status}}</td>
+        <td>{{sprint.prize_earned}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+    <a href="{% url 'sprint_add' %}"><button>Add sprint</button></a> 
+  </div> 
+
+{% endblock %}
