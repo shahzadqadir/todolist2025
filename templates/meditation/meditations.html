@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Meditations{% endblock %}
+
+{% block content %}
+
+  <div class="container mt-5">
+    {% if meditations %}
+    <table class="table">
+      <th>Date Meditated</th>
+      <th>Minutes Spent</th>
+      <th>Comments</th>
+      <th>Sprint</th>    
+      {% for meditation in meditations %}
+      <tr>
+        <td>{{meditation.date_meditated}}</td>
+        <td>{{meditation.minutes_spent}}</td>
+        <td>{{meditation.comments}}</td>
+        <td>{{meditation.sprint}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+    <a href="{% url 'meditation_add' %}"><button>Add Meditation</button></a> 
+  </div> 
+
+{% endblock %}

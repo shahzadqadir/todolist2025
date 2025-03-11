@@ -18,7 +18,7 @@ class PrayerForm(forms.ModelForm):
 class MeditationForm(forms.ModelForm):
     class Meta:
         model = Meditation
-        fields = ('date_meditated', 'minutes_spent', 'comments', 'sprint')
+        fields = ('date_meditated', 'minutes_spent', 'comments', 'sprint', 'owner')
 
 
 class TaskForm(forms.ModelForm):

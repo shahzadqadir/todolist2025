@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
+from django.views import generic
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-from task.models import Task
-
+from task.models import Meditation, Task
 from .forms import PrayerForm, SprintForm, MeditationForm, TaskForm
 
 
@@ -79,8 +81,20 @@ def add_prayer(request):
     return render(request, 'task/add_prayer.html', {'form': form})
 
 
-@login_required
-def add_meditation(request):
-    if request.method == 'GET':
-        form = MeditationForm()
-    return render(request, 'task/add_meditation.html', {'form': form})
+
+### Meditation Model
+
+class MeditationListView(generic.ListView):
+    model = Meditation
+    queryset = Meditation.objects.all()
+    template_name = 'meditation/meditations.html'
+    context_object_name = 'meditations'
+
+
+class MeditationCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Meditation
+    form_class = MeditationForm
+    template_name = 'meditation/meditation_add.html'
+    success_url = reverse_lazy('meditations')
+
+    

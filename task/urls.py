@@ -10,5 +10,6 @@ urlpatterns =[
     path('tasks/<int:id>/edit/', views.task_edit, name='task_edit'),
     path('tasks/<int:id>/delete/', views.task_delete, name='task_delete'),
     path('add_prayer/', views.add_prayer, name='add_prayer'),
-    path('add_meditation/', views.add_meditation, name='add_meditation'),
+    path('meditations/', views.MeditationListView.as_view(), name='meditations'),
+    path('meditations/add/', views.MeditationCreateView.as_view(), name='meditation_add'),
 ]
