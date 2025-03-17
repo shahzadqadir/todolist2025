@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'task.apps.TaskConfig',
+    'pages.apps.PagesConfig',
     'crispy_forms',
     'crispy_bootstrap5',
 ]

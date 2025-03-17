@@ -12,4 +12,9 @@ urlpatterns =[
     path('add_prayer/', views.add_prayer, name='add_prayer'),
     path('meditations/', views.MeditationListView.as_view(), name='meditations'),
     path('meditations/add/', views.MeditationCreateView.as_view(), name='meditation_add'),
+    path('prayers/', views.PrayerListView.as_view(), name='prayers'),
+    path('prayers/add/', views.PrayerCreateView.as_view(), name='prayer_add'),
+    path('sprints/', views.SprintListView.as_view(), name='sprints'),
+    path('sprints/add/', views.SprintCreateView.as_view(), name='sprint_add'),
+    path('sprints/<int:pk>/edit/', views.SprintEditView.as_view(), name='sprint_edit'),
 ]

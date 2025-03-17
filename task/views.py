@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from task.models import Meditation, Task
+from task.models import Meditation, Prayer, Sprint, Task
 from .forms import PrayerForm, SprintForm, MeditationForm, TaskForm
 
 
@@ -13,7 +13,7 @@ def index(request):
 
 @login_required
 def tasks(request):
-    tasks = Task.objects.filter(owner=request.user)
+    tasks = Task.objects.filter(owner=request.user).exclude(status='complete')
     return render(request, 'task/tasks.html', {'tasks': tasks})
 
 @login_required
@@ -97,4 +97,37 @@ class MeditationCreateView(LoginRequiredMixin, generic.CreateView):
     template_name = 'meditation/meditation_add.html'
     success_url = reverse_lazy('meditations')
 
-    
+
+class PrayerListView(generic.ListView):
+    model = Prayer
+    queryset = Prayer.objects.all()
+    template_name = 'prayer/prayers.html'
+    context_object_name = 'prayers'
+
+
+class PrayerCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Prayer
+    form_class = PrayerForm
+    template_name = 'prayer/prayer_add.html'
+    success_url = reverse_lazy('prayers')
+
+
+class SprintListView(generic.ListView):
+    model = Sprint
+    queryset = Sprint.objects.all()
+    template_name = 'sprint/sprints.html'
+    context_object_name = 'sprints'
+
+
+class SprintCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Sprint
+    form_class = SprintForm
+    template_name = 'sprint/sprint_add.html'
+    success_url = reverse_lazy('sprints')
+
+
+class SprintEditView(LoginRequiredMixin, generic.UpdateView):
+    model = Sprint    
+    form_class = SprintForm
+    template_name = 'sprint/sprint_edit.html'
+    success_url = reverse_lazy('sprints')

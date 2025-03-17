@@ -12,11 +12,12 @@
       <th>Status</th>
       <th>Comments</th>    
       <th>Prize Earned</th>   
-      {% for sprint in sprints %}
+      {% for sprint in sprints|dictsortreversed:'due_date' %}
       <tr>
-        <td>{{sprint.name}}</td>
+        <td><a href="{% url 'sprint_edit' sprint.id %}">{{sprint.name}}</a></td>
         <td>{{sprint.due_date}}</td>
         <td>{{sprint.status}}</td>
+        <td>{{sprint.comments}}</td>
         <td>{{sprint.prize_earned}}</td>
       </tr>
       {% endfor %}
