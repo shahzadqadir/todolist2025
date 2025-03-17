@@ -1,0 +1,189 @@
+Host 50.17.94.201
+  HostName 50.17.94.201
+  IdentityFile webserver-01-1608.pem
+  User ubuntu
+
+Host 50.17.94.201
+  HostName 50.17.94.201
+  IdentityFile webserver-01-1608.pem
+  User ubuntu
+
+Host 10.10.100.1
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.101
+    KexAlgorithms +diffie-hellman-group1-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc
+    HostkeyAlgorithms +ssh-rsa
+
+Host 192.168.10.1
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 192.168.10.2
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 192.168.10.3
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 192.168.10.4
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.10.1
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.2
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.3
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.4
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.5
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.6
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.7
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.8
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.9
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.10
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,3des-cbc,aes192-cbc,aes256-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.19
+  KexAlgorithms +diffie-hellman-group1-sha1
+  Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.20
+  KexAlgorithms +diffie-hellman-group1-sha1
+  Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 10.10.100.101
+  KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+  Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc
+  HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.2
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.3
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.4
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.5
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.6
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.7
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.8
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.20.20.9
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 192.168.1.11
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+Host 172.16.251.201 
+    KexAlgorithms +diffie-hellman-group1-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1
+    Ciphers aes128-cbc,aes192-cbc,aes256-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr
+    HostkeyAlgorithms +ssh-rsa
+
+
+Host 172.16.251.100
+    User admin
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
+Host 172.16.251.101
+    User admin
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
+Host 172.16.251.102
+    User admin
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
+Host 172.16.251.103
+    User admin
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
+Host 172.16.251.201
+    User admin
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+    HostKeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
